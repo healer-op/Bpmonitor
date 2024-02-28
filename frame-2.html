@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet" crossorigin><link rel="stylesheet" href="./frame3.css">
+
+</head>
+<style>
+    #loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff
+    url('public/load.gif')
+     no-repeat center center;	
+    z-index: 999999;
+ }
+ </style>
+ 
+    <body onload="myFunction()" >
+       <div id="loading">
+ </div>
+    <script>
+       // $(document).ready(function(){
+          // 	$('div#loading').removeAttr('id');
+       // });
+       var preloader = document.getElementById("loading");
+       // window.addEventListener('load', function(){
+       // 	preloader.style.display = 'none';
+       // 	})
+    
+       function myFunction(){
+          setTimeout(function(){ preloader.style.display = 'none'; }, 5000);
+       };
+    </script>
+
+
+
+<div id="showScroll" class="container">
+	<div class="receipt" id="vitals">
+		<h1 class="logo">Icare Report</h1>
+		<div class="address">
+			NMIMS,Mumbai
+		</div>
+		<div class="transactionDetails">
+			<div class="detail" id="name"></div>
+			<div class="detail" id="age"></div>
+			<div class="detail" id="sex"></div>
+			<div class="detail" id="time"></div>
+		</div>
+		<div class="transactionDetails" id="email">
+		</div>
+		<div class="survey bold">
+			<p>Blood Pressure</p>
+			<p class="surveyID" id="bp"></p>
+		</div>
+		<div class="survey bold">
+			<p>SPO2</p>
+			<p class="surveyID" id="so"></p>
+		</div>
+		<div class="feedback">
+			<div class="break">
+				*************************************
+			</div>
+			<p class="center">
+				This Report is not a final conclusion please reffer to our health care specialist for further information
+			</p>
+			<h3 class="clickBait">ICare Hospital</h3>
+			<h4 class="web">www.icarehospitals.com</h4>
+			<div class="break">
+				*************************************
+			</div>
+		</div>
+	</div>
+	<br>
+
+	<center>
+	<BUTTON onclick="mail()">Mail</BUTTON>
+	<BUTTON id="button">Print</BUTTON>
+</center>
+</div>
+
+<!-- partial -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
+<script src="main.js"></script>
+  <script>
+    measure_click()
+  </script>
+</body>
+</html>
